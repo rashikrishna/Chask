@@ -1,0 +1,106 @@
+*{
+  margin:0;
+  padding:3px;
+}
+
+body{
+  height:100vh;
+  width:100vw;
+  background-color: #A890FE;
+  z-index: 1;
+}
+
+.heading-chask{
+  font-family: 'Shadows Into Light', cursive;
+  letter-spacing: 6px;
+  font-size: 1.5rem;
+
+}
+.body-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin: 10px;
+
+}
+
+.left-container{
+  top:0;
+  left:0;
+  align-items: center;
+  z-index: 3;
+  height: 100%;
+  width: 30%;
+  padding: 15px;
+  border: 2px solid red;
+  /*font-family: 'Permanent Marker', cursive;*/
+  font-size: 30px;
+  background: #fdd178;
+  opacity:0.80;
+  /*background-color: #EA8D8D;*/
+
+}
+/*.left-container-bg{
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: url(strips.jpg);
+  opacity :0.70;
+}*/
+
+.right-container{
+  z-index: 2;
+  margin-left: 10px;
+  padding:10px;
+  height:100%;
+  width: 62%;
+  background: url(doodle.jpg);
+  opacity :0.70;
+  border: 2px solid blue;
+}
+.textarea-chat{
+  z-index: 3;
+  opacity: 1;
+  width: 50%;
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  align-items: center;
+  background-color: red;
+}
+input, textarea{
+  padding:4px;
+  font-size: 10px ;
+  width:100%;
+  box-sizing:border-box;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+/*button{
+  background-color:green;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+button:hover{
+  background-color: #fff;
+  color: #000;
+
+}*/
+
+.chats{
+  font-size: 25px;
+  color :blue;
+  background-color: #fff;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  margin: 6px;
+}

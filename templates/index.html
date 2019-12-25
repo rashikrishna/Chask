@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+  </head>
+  <title>
+    Welcome To Chask
+  </title>
+  <body>
+    <div class="heading-chask"><center><h1>Chask</h1></center></div>
+    <div class="body-container">
+      <div class="left-container">
+        Welcome <div id="user"></div>!!
+        <hr><br>
+        <label>Create a new Chatroom</label>
+        <br>
+        <input type="text" name="" id="new-chatroom" placeholder="ChatRoom Name Here">
+        <button id="create-new-chatroom">Create</button>
+        <br><br><br>
+        <hr><br>
+        <label>Enter Existing Chatroom</label><br>
+        <select id="chatroom-list">
+          {% for ch in chatrooms %}
+            <option value={{ch}}>{{ch}}</option>
+          {% endfor %}
+        </select>
+        <button id="enter-chatroom">Enter</button>
+        <div id="chatrooms"></div>
+      </div>
+      <div class="right-container">
+        <div id="list-of-chats">
+        </div>
+        <center>
+        <div class="textarea-chat">
+          <textarea rows="4" cols="40" placeholder="Text Here" id="message"></textarea>
+          <button id="send-chat"><i class="fab fa-telegram-plane"></i> Send</button>
+        </div>
+      </center>
+      </div>
+    </div>
+  </body>
+</html>
